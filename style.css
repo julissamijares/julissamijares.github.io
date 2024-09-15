@@ -197,21 +197,22 @@ header ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem; /* Space between cards */
-    margin: 2rem auto; /* Center container with margin */
-    padding: 0 1rem; /* Padding on the sides */
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 /* Page Title Styling */
 .page-title {
-    margin-left: 2rem; /* Adjust margin to move title off the left side */
+    margin-left: 2rem;
     font-size: 2rem;
     color: #333;
 }
 
-/* Card Styling */
+/* Card Styling - Assigning same styles to project and assignment cards */
 .project-card,
-.assignment-card {
+.assignment-card,
+.experience-card {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -226,7 +227,8 @@ header ul li a {
 
 /* Card Titles */
 .project-title,
-.assignment-title {
+.assignment-title,
+.job-title {
     font-size: 1.4rem;
     font-weight: bold;
     color: #333;
@@ -235,7 +237,8 @@ header ul li a {
 
 /* Card Descriptions */
 .project-description,
-.assignment-approach {
+.assignment-approach,
+.responsibilities {
     color: #555;
 }
 
