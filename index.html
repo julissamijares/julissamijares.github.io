@@ -3,49 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Julissa's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            background-color: white; /* White background for entire page */
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 5px 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Intro Section */
+        #intro {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .line {
+            font-size: 2rem;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+        }
+
+        .line span {
+            display: inline-block;
+            transform: translateX(-100%);
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        .line:first-child span {
+            animation-delay: 0s;
+        }
+
+        .line:last-child span {
+            animation-delay: 1s;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .highlight {
+            color: #3498db;
+        }
+
+        .arrow {
+            margin-top: 20px;
+            font-size: 2rem;
+            color: #3498db;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Main Content */
+        #main {
+            padding-top: 60px;
+        }
+
+        section {
+            padding: 30px 20px;
+        }
+
+        /* About Section */
+        #about {
+            margin-top: 0;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 800px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .highlight-word {
+            color: #3498db;
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            width: 250px;  /* Increased size */
+            height: 250px; /* Increased size */
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 3px solid #3498db;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Buttons */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            background-color: white;
+            color: black;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* Contact Info Section */
+        #contact {
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section__text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .contact-link {
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-link img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .contact-link:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="images\Professional Headshot.jpg" alt="Julissa Mijares Headshot" />
-            </div>
-            <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Julissa Mijares</h1>
-        <p class="section__text__p2">Data Scientist</p>
-        <div class="btn-container">
-            <button class="btn" onclick="window.open('images/Julissa_Mijares_Resume.pdf')">Download Resume</button>
-            <button class="btn" onclick="location.href='contact.html'">Contact Info</button>
+    <nav>
+        <div>Julissa's Portfolio</div>
+        <div style="margin-left: auto;">
+            <a href="projects.html">Projects</a>
+            <a href="work-experience.html">Work Experience</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="contact.html" style="padding-right: 50px;">Contact</a>
         </div>
-    </div>
-</section>
+    </nav>
 
-        <section id="about">
-            <p class="section__text__p1">Get To Know More</p>
-            <h1 class="title">About Me</h1>
-            <div class="text-container">
-                <p>
-                    Hi, I'm Julissa, originally from Texas and now studying data science at Boston University, where I’m pursuing a Bachelor of Science in Data Science with a minor in Mathematical Statistics. 
-                    Beyond my academic and professional pursuits, I enjoy finding balance through yoga, exploring the world of botany, and baking delicious treats. 
-                    I’m always excited to learn and grow, both in my career and in my personal life.
-                </p>
+    <!-- Intro Section -->
+    <div id="intro">
+        <div class="line"><span>Hello, I'm <span class="highlight">Julissa</span>.</span></div>
+        <div class="line"><span>I'm a Data Scientist and Coder.</span></div>
+        <div class="arrow">↓</div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main">
+        <!-- About Me Section -->
+        <section id="about" class="about-me" style="padding-bottom: 200px;">
+            <div class="profile-pic">
+                <img src="images/Professional Headshot.jpg" alt="Profile Picture">
+            </div>
+            <h1>About Me</h1>
+            <p>
+                I graduated from Boston University with a major in <span class="highlight-word">Data Science</span> and a minor in <span class="highlight-word">Statistics</span>. I've always enjoyed math, and being part of the tech industry allows me the opportunity to imagine what the future will look like. I primarily have work experience with analytics, helping businesses and marketing teams analyze what has worked in the past and predict trends with <span class="highlight-word">machine learning models</span>. You can find more details about my work experience in the "Work Experience" tab.
+                <br><br>
+                Originally, I’m from the <span class="highlight-word">Lone Star State</span> – Texas – and I enjoy spending time outdoors when the sun is shining. Outside of my career, I like to do a variety of activities such as baking, yoga, and playing with my dogs, Charlie (Rottweiler) and Matcha (Pomeranian). My favorite recipe to share is <span class="highlight-word">brown butter chocolate chip cookies</span>, but if you have a furry friend, I also love making <span class="highlight-word">pet-friendly treats</span>!
+            </p>
+
+            <!-- Buttons -->
+            <div class="button-container">
+                <a href="images/Julissa_Mijares_Resume.pdf" download>Resume</a>
+                <a href="contact.html">Contact Me</a>
             </div>
         </section>
-    </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer__container">
+                <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                    <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
+                </div>
+                <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                    <a href="https://linkedin.com/in/julissamijares" class="contact-link">
+                        <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                    </a>
+                    <a href="mailto:jmijares@bu.edu" class="contact-link">
+                        <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
+                    </a>
+                    <a href="https://github.com/julissamijares" class="contact-link">
+                        <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                    </a>
+                </div>
+            </div>
+        </footer>
+           
+
 </body>
 </html>
