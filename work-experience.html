@@ -4,46 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Experience</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="header-nav.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="buttons-forms.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Julissa's Portfolio</div>
+        <div>
+            <a href="index.html">About Me</a>
+            <a href="work-experience.html" class="active">Work Experience</a>
+            <div class="dropdown">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="assignments.html">CS506 Assignments</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-    <main>
-        <h1>Work Experience</h1>
-        <p>Details about your work experience go here. You can include job titles, companies, durations, and key responsibilities or achievements.</p>
-    </main>
+    <div id="main">
+        <section id="work-experience">
+            <h1 class="page-title">My Work Experience</h1>
+            <div class="card-container">
+                <!-- Experience Card 1 -->
+                <div class="card">
+                    <h2 class="job-title">Technical Team Member & Project Manager</h2>
+                    <p class="company">Spark! | Boston University</p>
+                    <p class="location">Boston, MA</p>
+                    <ul class="responsibilities">
+                        <li>Extracted and cleansed complex datasets from public and government sources using Python and APIs, ensuring accuracy and usability.</li>
+                        <li>Created visually compelling graphics with Python and Power BI, simplifying the communication of research insights for diverse audiences.</li>
+                        <li>Partnered with clients and teams to define project goals, troubleshoot issues, and monitor progress using GitHub for seamless collaboration.</li>
+                    </ul>
+                    <div class="skills">
+                        <span class="skill-box">Python</span>
+                        <span class="skill-box">Power BI</span>
+                        <span class="skill-box">GitHub</span>
+                    </div>
+                </div>
+        
+                <!-- Experience Card 2 -->
+                <div class="card">
+                    <h2 class="job-title">Data Analysis Intern</h2>
+                    <p class="company">Invoice Cloud Inc.</p>
+                    <p class="location">Braintree, MA</p>
+                    <ul class="responsibilities">
+                        <li>Developed dynamic Tableau dashboards to visualize key performance indicators, empowering stakeholders with actionable insights.</li>
+                        <li>Executed SQL queries to extract, process, and analyze relational database data, ensuring precision in reporting and strategic decision-making.</li>
+                        <li>Streamlined data storage and retrieval processes using Snowflake, maintaining high standards for data quality and integrity.</li>
+                    </ul>
+                    <div class="skills">
+                        <span class="skill-box">Tableau</span>
+                        <span class="skill-box">SQL</span>
+                        <span class="skill-box">Snowflake</span>
+                    </div>
+                </div>
 
-    <section id="work-experience">
-        <div class="experience-card">
-            <h2 class="job-title">Technical Team Member</h2>
-            <h3 class="company">Spark! at Boston University</h3>
-            <p class="location">Boston, MA</p>
-            <ul class="responsibilities">
-                <li>Collaborated with international and domestic clients to scope and develop machine learning programs.</li>
-                <li>Built interactive dashboards to visualize project data.</li>
-                <li>Led technical discussions and provided support to junior team members.</li>
-            </ul>
-            <div class="skills">
-                <span class="skill-box">Python</span>
-                <span class="skill-box">SQL</span>
-                <span class="skill-box">Data Visualization</span>
-                <span class="skill-box">Machine Learning</span>
+                <!-- Experience Card 3 -->
+                <div class="card">
+                    <h2 class="job-title">Data Analysis & Marketing Intern</h2>
+                    <p class="company">Generations Federal Credit Union</p>
+                    <p class="location">San Antonio, TX</p>
+                    <ul class="responsibilities">
+                        <li>Analyzed extensive company datasets using Python to develop impactful visualizations and reports, facilitating data-driven marketing strategies.</li>
+                        <li>Supported digital marketing campaigns, including email outreach and website optimization, by identifying trends and opportunities through detailed analysis.</li>
+                    </ul>
+                    <div class="skills">
+                        <span class="skill-box">Python</span>
+                        <span class="skill-box">Excel</span>
+                        <span class="skill-box">Marketing Analytics</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="card">
+                    <h2 class="job-title">Office Assistant & Front Desk Associate</h2>
+                    <p class="company">Development & Alumni Relations | Boston University</p>
+                    <p class="location">Boston, MA</p>
+                    <ul class="responsibilities">
+                        <li>Supported alumni engagement efforts by assisting with alumni event planning and execution, including 2023 and 2024 Giving Day.</li>
+                        <li>Managed accurate donor data files and identified trends such as registration attendance patterns.</li>
+                        <li>Provided general office support, greeted visitors, and assisted with guests' general requests in person and over the phone.</li>
+                    </ul>
+                    <div class="skills">
+                        <span class="skill-box">Event Planning</span>
+                        <span class="skill-box">Data Management</span>
+                        <span class="skill-box">Customer Service</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card 5 -->
+                <div class="card">
+                    <h2 class="job-title">Computer Assistant</h2>
+                    <p class="company">Questrom IT Lab</p>
+                    <p class="location">Boston, MA</p>
+                    <ul class="responsibilities">
+                        <li>Resolved classroom projector and computer issues promptly, ensuring uninterrupted teaching and presentations.</li>
+                        <li>Supervised and maintained the computer lab, accommodating groups of up to 30 individuals for academic and research activities.</li>
+                    </ul>
+                    <div class="skills">
+                        <span class="skill-box">IT Support</span>
+                        <span class="skill-box">Problem Solving</span>
+                        <span class="skill-box">Lab Management</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
+            </div>
+            <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <a href="https://linkedin.com/in/julissamijares" class="contact-link">
+                    <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="mailto:jmijares@bu.edu" class="contact-link">
+                    <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="https://github.com/julissamijares" class="contact-link">
+                    <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
             </div>
         </div>
-    
-        <!-- Add more experience cards in the same format -->
-    </section>
-    
+    </footer>
 </body>
 </html>

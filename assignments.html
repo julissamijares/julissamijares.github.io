@@ -4,141 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="header-nav.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="buttons-forms.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Julissa's Portfolio</div>
+        <div>
+            <a href="index.html">About Me</a>
+            <a href="work-experience.html">Work Experience</a>
+            <div class="dropdown">
+                <a href="projects.html" class="active">Projects</a>
+                <!-- Dropdown for CS506 Assignments under Projects -->
+                <div class="dropdown-content">
+                    <a href="assignments.html">CS506 Assignments</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
     <main>
-        <h1 class="page-title">Assignments</h1>
+        <section class="page-title-container">
+            <h1 class="page-title">CS506 Assignments</h1>
+        </section>
         <section id="assignments" class="card-container">
+            <!-- Assignment Cards -->
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 0: Add Two Numbers</h2>
                 <p class="assignment-task">
                     <strong>Assignment task:</strong> Write a Python script that adds two numbers together and prints their sum to the command line.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-assignment-0" class="btn">GitHub Link</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-0" class="btn">GitHub Link</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 1: CDS Elevator Data</h2>
-                <p class="assignment-approach">
+                <p class="assignment-task">
                     <strong>Assignment task:</strong> Using CDS elevator arrival data, find the optimal location to stand to minimize the distance to the next elevator.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-assignment-1" class="btn">GitHub Link</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-1" class="btn">GitHub Link</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 2: K-Means Visualizer</h2>
-                <p class="assignment-approach">
+                <p class="assignment-task">
                     <strong>Assignment task:</strong> Create a web application that visualizes KMeans Clustering.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-assignment-2" class="btn">GitHub Link</a>
-                <a href="images/KMeans Clustering Video.mp4" class="btn">Demo Video</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-2" class="btn">GitHub Link</a>
+                    <a href="images/KMeans Clustering Video.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 3: Singular Value Decomposition</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> In this assignment, I implement the Singular Value Decomposition (SVD) algorithm from scratch. 
-                    I also use the SVD to perform dimensionality reduction on a dataset, explore the effect of the number of dimensions on the performance 
-                    of a classifier, and visualize the results for comparison and analysis.
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Implement the Singular Value Decomposition (SVD) algorithm from scratch and use it for dimensionality reduction on a dataset.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-assignment-3" class="btn">GitHub Link</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-3" class="btn">GitHub Link</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 4: Latent Semantic Analysis (LSA) Search Engine</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> Develop an interactive web application that implements a basic search engine using Latent Semantic 
-                    Analysis (LSA). The search engine will take a user’s query, perform LSA on a pool of documents, and return the top documents based on 
-                    cosine similarity.
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Develop an interactive web application implementing a basic search engine using LSA.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-assignment-4" class="btn">GitHub Link</a>
-                <a href="images/LSA Search Engine.mp4" class="btn">Demo Video</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-4" class="btn">GitHub Link</a>
+                    <a href="images/LSA Search Engine.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 5: K-Nearest Neighbors Kaggle Competition</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> In this assignment, I implemented a K-Nearest Neighbors (KNN) model from scratch to predict 
-                    customer churn for a bank. My goal was to identify customers who are likely to leave the bank based on historical data and submit 
-                    the predictions in a mini Kaggle competition.
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Implement a KNN model from scratch to predict customer churn and participate in a Kaggle competition.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-assignment-5" class="btn">GitHub Link</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-5" class="btn">GitHub Link</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">MIDTERM: Kaggle Competition</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> Create a model to predit the scores/rating of Amazon movies
-                    based on various features. Limitations: Not allowed to use deep learning or neural networks.
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Create a model to predict the scores/ratings of Amazon movies based on various features. 
+                    Limitations: Not allowed to use deep learning or neural networks.
                 </p>
-                <a href="https://github.com/julissamijares/jmijares-midterm" class="btn">GitHub Link</a>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-midterm" class="btn">GitHub Link</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 6: Linear Regression</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> Explore the impact of changing parameters on linear regression. The goal is to create an 
-                    interactive webpage to demonstrate how modifying these parameters affects regression results, especially when there is no actual 
-                    relationship between X and Y. 
-                </p>   
-                <a href="https://github.com/julissamijares/jmijares-assignment-6" class="btn">GitHub Link</a>
-                <a href="images/Linear Regression.mp4" class="btn">Demo Video</a>
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Explore the impact of changing parameters on linear regression. Create an 
+                    interactive webpage to demonstrate how modifying these parameters affects regression results, especially when there 
+                    is no actual relationship between X and Y.
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-6" class="btn">GitHub Link</a>
+                    <a href="images/Linear Regression.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 7: Hypothesis Testing and Confidence Intervals in Linear Regression</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> Extend the previous work from Assignment 6 to include hypothesis testing and confidence 
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Extend the work from Assignment 6 to include hypothesis testing and confidence 
                     intervals through simulations. Enhance the interactive webpage to allow users to perform hypothesis tests on the slope or 
                     intercept of the regression line and generate confidence intervals based on simulations.
-                </p>   
-                <a href="https://github.com/julissamijares/jmijares-assignment-7" class="btn">GitHub Link</a>
-                <a href="images/assignment7video.mp4" class="btn">Demo Video</a>
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-7" class="btn">GitHub Link</a>
+                    <a href="images/assignment7video.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 8: Logistic Regression</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> Explore the effect of shifting clusters in a dataset on the parameters 
-                    of a logistic regression model.
-                </p>   
-                <a href="https://github.com/julissamijares/jmijares-assignment-8" class="btn">GitHub Link</a>
-                <a href="images/assignment8video.mp4" class="btn">Demo Video</a>
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Explore the effect of shifting clusters in a dataset on the parameters of a 
+                    logistic regression model.
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-8" class="btn">GitHub Link</a>
+                    <a href="images/assignment8video.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 9: Neural Networks</h2>
-                <p class="assignment-approach">
+                <p class="assignment-task">
                     <strong>Assignment task:</strong> Implement and analyze a simple neural network by visualizing its learned features, 
                     decision boundary, and gradients. The goal is to develop a deeper understanding of how a Feedforward Neural Network 
                     with one hidden layer operates and represents the input space during learning.
-                </p>   
-                <a href="https://github.com/julissamijares/jmijares-assignment-9" class="btn">GitHub Link</a>
-                <a href="images/assignment9video.mp4" class="btn">Demo Video</a>
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-9" class="btn">GitHub Link</a>
+                    <a href="images/assignment9video.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Assignment 10: Image Search</h2>
-                <p class="assignment-approach">
-                    <strong>Assignment task:</strong> Implement a simplified version of Google Image Search.
-                    Note: I have not been able to install the necessary packages on my end to actually
-                    test the code. See piazza post @303.
-                </p>   
-                <a href="https://github.com/julissamijares/jmijares-assignment-10" class="btn">GitHub Link</a>
-                <a href="images/assignment10video.mp4" class="btn">Demo Video</a>
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Implement a simplified version of Google Image Search. 
+                    Note: I have not been able to install the necessary packages on my end to actually test the code. See Piazza post @303.
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/jmijares-assignment-10" class="btn">GitHub Link</a>
+                    <a href="images/assignment10video.mp4" class="btn">Demo Video</a>
+                </div>
             </div>
             <div class="assignment-card">
                 <h2 class="assignment-title">Extra Credit: Kaggle Competition</h2>
-                <p class="assignment-approach">
-                    <strong>Credit Card Fraud Detection.
-                </p>   
-                <a href="https://github.com/julissamijares/cs506_extra_credit" class="btn">GitHub Link</a>
+                <p class="assignment-task">
+                    <strong>Assignment task:</strong> Credit Card Fraud Detection.
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/julissamijares/cs506_extra_credit" class="btn">GitHub Link</a>
+                </div>
             </div>
-            <!-- Add more assignment cards as needed -->
+            
+            <!-- Add similar blocks for other assignments -->
         </section>
     </main>
     
+    <!-- Footer -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
+            </div>
+            <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <a href="https://linkedin.com/in/julissamijares" class="contact-link">
+                    <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="mailto:jmijares@bu.edu" class="contact-link">
+                    <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="https://github.com/julissamijares" class="contact-link">
+                    <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

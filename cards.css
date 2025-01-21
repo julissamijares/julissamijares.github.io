@@ -1,0 +1,114 @@
+/* General styles for both Work Experience and Projects */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+    padding: 0 20px 80px; 
+    box-sizing: border-box; /* Make sure padding is included in width calculation */
+    width: 100%; 
+}
+
+/* General Card Styles for both Work Experience and Projects */
+.card,
+.assignment-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.33% - 20px); /* For large screens, cards take up 1/3 of the width, minus margin */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* Card Hover Effect */
+.card:hover,
+.assignment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Title (for both tabs) */
+.card-title,
+.assignment-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Description (for both tabs) */
+.card-description,
+.assignment-task,
+.assignment-approach {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Skills section in the cards */
+.skills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Skill Box */
+.skill-box {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Specific styling for Work Experience tab */
+
+/* Job Title (blue for Work Experience) */
+.job-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db; /* Blue */
+    margin-bottom: 10px;
+}
+
+/* Location */
+.location {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For small screens (below 600px) - Show 1 card per row */
+@media (max-width: 600px) {
+    .card,
+    .assignment-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* For medium screens (600px to 900px) - Show 2 cards per row */
+@media (min-width: 600px) and (max-width: 900px) {
+    .card,
+    .assignment-card {
+        width: calc(50% - 10px); /* Cards take up half the width of the screen */
+    }
+}
+
+/* For large screens (above 900px) - Show 3 cards per row */
+@media (min-width: 901px) {
+    .card,
+    .assignment-card {
+        width: calc(33.33% - 20px); /* 3 cards per row with margin */
+    }
+}

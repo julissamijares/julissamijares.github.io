@@ -4,240 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julissa's Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
-            background-color: white; /* White background for entire page */
-        }
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="header-nav.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="buttons-forms.css">
+    <link rel="stylesheet" href="footer.css">
 
-        /* Navigation Bar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 10px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 10;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            padding: 5px 15px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Intro Section */
-        #intro {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .line {
-            font-size: 2rem;
-            font-weight: bold;
-            overflow: hidden;
-            white-space: nowrap;
-            display: inline-block;
-        }
-
-        .line span {
-            display: inline-block;
-            transform: translateX(-100%);
-            animation: slideIn 1s ease-out forwards;
-        }
-
-        .line:first-child span {
-            animation-delay: 0s;
-        }
-
-        .line:last-child span {
-            animation-delay: 1s;
-        }
-
-        @keyframes slideIn {
-            to {
-                transform: translateX(0);
-            }
-        }
-
-        .highlight {
-            color: #3498db;
-        }
-
-        .arrow {
-            margin-top: 20px;
-            font-size: 2rem;
-            color: #3498db;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
-        }
-
-        /* Main Content */
-        #main {
-            padding-top: 60px;
-        }
-
-        section {
-            padding: 30px 20px;
-        }
-
-        /* About Section */
-        #about {
-            margin-top: 0;
-            padding: 50px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-            font-family: 'Helvetica Neue', sans-serif;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 800px;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        .highlight-word {
-            color: #3498db;
-        }
-
-        /* Profile Picture */
-        .profile-pic {
-            width: 250px;  /* Increased size */
-            height: 250px; /* Increased size */
-            border-radius: 50%;
-            overflow: hidden;
-            margin-bottom: 30px;
-            border: 3px solid #3498db;
-        }
-
-        .profile-pic img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Buttons */
-        .button-container {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .button-container a {
-            text-decoration: none;
-            background-color: white;
-            color: black;
-            font-size: 1.2rem;
-            padding: 10px 20px;
-            border: 2px solid black;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .button-container a:hover {
-            background-color: black;
-            color: white;
-        }
-
-        /* Contact Info Section */
-        #contact {
-            padding: 50px 20px;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section__text {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-        }
-
-        .contact-link {
-            color: #333;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-link img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .contact-link:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Footer */
-        footer {
-            background-color: black;
-            color: white;
-            padding: 8px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 1rem;
-        }
-    </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
-        <div>Julissa's Portfolio</div>
-        <div style="margin-left: auto;">
-            <a href="projects.html">Projects</a>
+        <div class="logo">Julissa's Portfolio</div>
+        <div>
+            <<a href="index.html" class="active">About Me</a>
             <a href="work-experience.html">Work Experience</a>
-            <a href="assignments.html">Assignments</a>
-            <a href="contact.html" style="padding-right: 50px;">Contact</a>
+            <div class="dropdown">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="assignments.html">CS506 Assignments</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
     <!-- Intro Section -->
     <div id="intro">
-        <div class="line"><span>Hello, I'm <span class="highlight">Julissa</span>.</span></div>
-        <div class="line"><span>I'm a Data Scientist and Coder.</span></div>
+        <div class="line first-line">
+            <span>Hello, I'm <span class="highlight">Julissa</span>.</span>
+        </div>
+        <div class="line second-line">
+            <span>I'm a Data Scientist and <span class="highlight">Coder</span>.</span>
+        </div>
         <div class="arrow">↓</div>
     </div>
 
@@ -262,26 +60,24 @@
             </div>
         </section>
 
-        <!-- Footer Section -->
-        <footer>
-            <div class="footer__container">
-                <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
-                    <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
-                </div>
-                <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-                    <a href="https://linkedin.com/in/julissamijares" class="contact-link">
-                        <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
-                    </a>
-                    <a href="mailto:jmijares@bu.edu" class="contact-link">
-                        <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
-                    </a>
-                    <a href="https://github.com/julissamijares" class="contact-link">
-                        <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
-                    </a>
-                </div>
+        <!-- Footer -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
             </div>
-        </footer>
-           
-
+            <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <a href="https://linkedin.com/in/julissamijares" class="contact-link">
+                    <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="mailto:jmijares@bu.edu" class="contact-link">
+                    <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="https://github.com/julissamijares" class="contact-link">
+                    <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

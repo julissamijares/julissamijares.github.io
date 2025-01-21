@@ -4,52 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="header-nav.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="buttons-forms.css">
+    <link rel="stylesheet" href="footer.css">
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Julissa's Portfolio</div>
+        <div>
+            <a href="index.html">About Me</a>
+            <a href="work-experience.html">Work Experience</a>
+            <div class="dropdown">
+                <a href="projects.html">Projects</a>
+                <div class="dropdown-content">
+                    <a href="assignments.html">CS506 Assignments</a>
+                </div>
+            </div>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+    </nav>
 
+    <!-- Contact Section -->
     <section id="contact">
-        <div class="section__text">
-            <h1 class="title">Contact Info</h1>
-            <p>If you'd like to get in touch, feel free to reach out to me via email, LinkedIn, or check out my projects on GitHub!</p>
-            <div id="socials-container">
+        <div class="contact-container">
+            <!-- Left Side: Contact Info -->
+            <div class="contact-info">
+                <h1 class="title">Let's Talk!</h1>
+                <p>If you'd like to get in touch, feel free to reach out to me via email, LinkedIn, or check out my projects on GitHub!</p>
+                
                 <div class="contact-item">
-                    <img
-                        src="images/email2.png"
-                        alt="Send an email"
-                        class="icon"
-                    />
+                    <h3>Email</h3>
+                    <img src="images/email2.png" alt="Send an email" class="icon" />
                     <a href="mailto:jmijares@bu.edu" class="contact-link">jmijares@bu.edu</a>
                 </div>
+                
                 <div class="contact-item">
-                    <img
-                        src="images/linkedin.png"
-                        alt="LinkedIn profile"
-                        class="icon"
-                    />
+                    <h3>LinkedIn</h3>
+                    <img src="images/linkedin.png" alt="LinkedIn profile" class="icon" />
                     <a href="https://linkedin.com/in/julissamijares" class="contact-link">linkedin.com/in/julissamijares</a>
                 </div>
+                
                 <div class="contact-item">
-                    <img
-                        src="images/github.png"
-                        alt="GitHub profile"
-                        class="icon"
-                    />
+                    <h3>GitHub</h3>
+                    <img src="images/github.png" alt="GitHub profile" class="icon" />
                     <a href="https://github.com/julissamijares" class="contact-link">github.com/julissamijares</a>
                 </div>
             </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="contact-form">
+                <h1 class="title">Send a Quick Message</h1>
+                <form id="message-form">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required pattern="[A-Za-z]+" />
+
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required pattern="[A-Za-z]+" />
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required />
+
+                    <label for="message">Type your message here...</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." maxlength="200" required></textarea>
+
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
         </div>
-    </section>    
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
+            </div>
+            <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <a href="https://linkedin.com/in/julissamijares" class="contact-link">
+                    <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="mailto:jmijares@bu.edu" class="contact-link">
+                    <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="https://github.com/julissamijares" class="contact-link">
+                    <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // Form Validation
+        const form = document.getElementById('message-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form submission
+
+            let valid = true;
+
+            // Check each field
+            form.querySelectorAll('input, textarea').forEach((field) => {
+                if (!field.checkValidity()) {
+                    valid = false;
+                    field.style.borderColor = 'red';
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            // If form is valid, show an alert (replace with actual submission logic)
+            if (valid) {
+                alert('Message submitted successfully!');
+                form.reset();
+            }
+        });
+    </script>
 </body>
 </html>

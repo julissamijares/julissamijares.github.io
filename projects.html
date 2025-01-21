@@ -4,40 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="header-nav.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="buttons-forms.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="work-experience.html">Work Experience</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="assignments.html">Assignments</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Julissa's Portfolio</div>
+        <div>
+            <a href="index.html">About Me</a>
+            <a href="work-experience.html">Work Experience</a>
+            <div class="dropdown">
+                <a href="projects.html" class="active">Projects</a>
+                <div class="dropdown-content">
+                    <a href="assignments.html">CS506 Assignments</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-    <main>
-        <h1 class="page-title">Projects</h1>
-        <section id="projects" class="card-container">
-            <div class="project-card">
-                <h2 class="project-title">Project Title 1</h2>
-                <p class="project-description">
-                    Brief description of Project Title 1. Explain what the project is about, the technologies used, and any notable features or achievements.
-                </p>
-                <a href="[link to project details]" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h2 class="project-title">Project Title 2</h2>
-                <p class="project-description">
-                    Brief description of Project Title 2. Describe the project's goals, technologies used, and any significant results or outcomes.
-                </p>
-                <a href="[link to project details]" class="btn">View Project</a>
-            </div>
-            <!-- Add more project cards as needed -->
+    <div id="main">
+        <!-- Page Title Section -->
+        <section class="page-title-container">
+            <h1 class="page-title">My Projects</h1>
         </section>
-    </main>
+
+        <!-- Cards Section -->
+        <section class="card-container">
+            <!-- Project Card 1 -->
+            <div class="card">
+                <h2 class="card-title">Portfolio Website</h2>
+                <p class="card-description">A responsive and interactive personal portfolio showcasing my skills and projects.</p>
+                <div class="skills">
+                    <span class="skill-box">HTML5</span>
+                    <span class="skill-box">CSS3</span>
+                    <span class="skill-box">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="card">
+                <h2 class="card-title">E-commerce App</h2>
+                <p class="card-description">A full-featured e-commerce platform built using React and Node.js.</p>
+                <div class="skills">
+                    <span class="skill-box">React</span>
+                    <span class="skill-box">Node.js</span>
+                    <span class="skill-box">MongoDB</span>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="card">
+                <h2 class="card-title">Weather App</h2>
+                <p class="card-description">A weather app that provides real-time weather updates using the OpenWeatherMap API.</p>
+                <div class="skills">
+                    <span class="skill-box">JavaScript</span>
+                    <span class="skill-box">API Integration</span>
+                    <span class="skill-box">CSS3</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer__container">
+            <div class="footer__left" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+                <p style="font-size: 12px;">JULISSA MIJARES © 2025</p>
+            </div>
+            <div class="footer__right" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+                <a href="https://linkedin.com/in/julissamijares" class="contact-link">
+                    <img src="images/linkedin.png" alt="LinkedIn profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="mailto:jmijares@bu.edu" class="contact-link">
+                    <img src="images/email2.png" alt="Send an email" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+                <a href="https://github.com/julissamijares" class="contact-link">
+                    <img src="images/github.png" alt="GitHub profile" style="filter: invert(100%); width: 30px; height: 30px;">
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

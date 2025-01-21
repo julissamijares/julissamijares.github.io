@@ -1,0 +1,151 @@
+/* header-nav.css */
+
+/* General Navigation Bar Styles */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 1000;
+    border-bottom: 2px solid #3498db; /* Optional: Add a subtle border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav .logo {
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+nav a {
+    margin: 0 10px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Active Link */
+nav a.active {
+    color: #3498db; /* Blue for active link */
+    font-weight: bold;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #3498db; /* Highlight color on hover */
+    font-weight: bold; /* Make it bold on hover */
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropdown > a {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    outline: none; /* Remove outline to prevent unwanted box */
+    border: none; /* Remove any border around the dropdown */
+}
+
+/* Hover Effect on Dropdown Button */
+.dropdown > a:hover {
+    background-color: #444;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px); /* Add 5px spacing between dropdown and navigation bar */
+    background-color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 100%;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect on Dropdown Links */
+.dropdown-content a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Active Link in Dropdown */
+.dropdown-content a.active {
+    font-weight: bold;
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* footer.css */
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    padding: 8px 0;
+    text-align: center;
+    position: fixed; /* Keeps the footer at the bottom of the screen */
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Social Icons and Contact Info */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.contact-link {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
